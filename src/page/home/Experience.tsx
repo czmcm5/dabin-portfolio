@@ -1,11 +1,12 @@
-import { Box, Card, Flex, Text } from "@radix-ui/themes";
-import { data } from "../../data/Experience";
+import { Box, Flex, Text } from "@radix-ui/themes";
 import {
-  CalendarIcon,
   BackpackIcon,
-  SewingPinIcon,
+  CalendarIcon,
   DotFilledIcon,
-} from "../../style/Icon";
+  SewingPinIcon,
+} from "../../assets/Icon";
+import { data } from "../../data/Experience";
+import { WhiteCard } from "../../shared/ui/WhiteCard";
 
 const Experience = () => {
   return (
@@ -24,14 +25,14 @@ const Experience = () => {
 
       <Box className="w-full max-w-[1000px]">
         {data.map((item, i) => (
-          <Card className="w-full" key={i} size={"3"}>
+          <WhiteCard key={i}>
             <Flex justify={"between"} mb={"4"}>
               <Box>
                 <Text size={"5"} weight={"bold"}>
                   {item.company}
                 </Text>
                 <Flex align={"center"} gap={"2"}>
-                  <BackpackIcon />
+                  <BackpackIcon color="gray" />
                   <Text color="gray" size={"2"}>
                     {item.position}
                   </Text>
@@ -39,13 +40,13 @@ const Experience = () => {
               </Box>
               <Flex direction={"column"} align={"end"}>
                 <Flex align={"center"} gap={"2"}>
-                  <CalendarIcon />
+                  <CalendarIcon color="gray" />
                   <Text color="gray" size={"2"}>
                     {item.period}
                   </Text>
                 </Flex>
                 <Flex align={"center"} gap={"2"}>
-                  <SewingPinIcon />
+                  <SewingPinIcon color="gray" />
                   <Text color="gray" size={"2"}>
                     {item.location}
                   </Text>
@@ -62,10 +63,10 @@ const Experience = () => {
             </Text>
             {item.achievements.map((item, i) => (
               <Text as="div" className="p-0" size={"3"} color="gray" key={i}>
-                <DotFilledIcon /> {item}
+                <DotFilledIcon color="var(--color-primary)" /> {item}
               </Text>
             ))}
-          </Card>
+          </WhiteCard>
         ))}
       </Box>
     </Flex>

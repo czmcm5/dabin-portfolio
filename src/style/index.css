@@ -6,6 +6,13 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --color-primary: #fbbf24;
+  --color-accent: #fb923c;
+  --color-bg: #ffff;
+  --color-subBg: #fffdeb;
+  --color-foreground: #3f3f46;
+  --color-muted: #fef3c7;
 }
 
 body {
@@ -19,12 +26,17 @@ body {
   padding: 0 1rem;
 }
 .container.gray {
-  background-color: #f9f9fa;
+  background-color: #fffdeb;
 }
-
-.blue-border {
+span.theme-text {
+  background: linear-gradient(to bottom right, #fbbf24, #fb923c);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.theme-border {
   background-image: linear-gradient(#fff, #fff),
-    linear-gradient(to bottom right, #8ab5ff, #8b18f7);
+    linear-gradient(to bottom right, #ffd877, #f17917);
   background-origin: border-box;
   background-clip: content-box, border-box;
 }

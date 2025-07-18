@@ -5,7 +5,8 @@ const Header = () => {
   return (
     <Flex className="container" direction="column" align={"center"} py={"9"}>
       <Text as="div" size={"9"} weight={"bold"} mb={"4"} align="center">
-        {data.title}
+        안녕하세요, 저는 <span className="theme-text">프론트엔드 개발자</span>{" "}
+        입니다.
       </Text>
       <Text as="div" size="5" color="gray" align="center" weight={"medium"}>
         {data.subTitle1}

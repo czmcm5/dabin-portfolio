@@ -31,7 +31,7 @@ const AboutMe = () => {
         </Box>
         <Flex className="flex-1" direction="column" align={"center"}>
           <Box
-            className="border-4 border-transparent rounded-full overflow-hidden blue-border"
+            className="border-4 border-transparent rounded-full overflow-hidden theme-border"
             width={"16rem"}
             height={"16rem"}
           >

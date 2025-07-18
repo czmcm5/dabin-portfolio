@@ -1,6 +1,7 @@
-import AboutMe from "../component/AboutMe/AboutMe";
-import Experience from "../component/Experience/Experience";
-import Header from "../component/Header/Header";
+import AboutMe from "../page/home/AboutMe";
+import Experience from "../page/home/Experience";
+import Header from "../page/home/Header";
+import Skills from "../page/home/Skills";
 
 function App() {
   return (
@@ -8,6 +9,7 @@ function App() {
       <Header />
       <AboutMe />
       <Experience />
+      <Skills />
     </>
   );
 }
