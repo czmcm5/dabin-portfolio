@@ -1,10 +1,11 @@
-import {
-  BackpackIcon,
-  CalendarIcon,
-  SewingPinIcon,
-} from "@radix-ui/react-icons";
 import { Box, Card, Flex, Text } from "@radix-ui/themes";
 import { data } from "../../data/Experience";
+import {
+  CalendarIcon,
+  BackpackIcon,
+  SewingPinIcon,
+  DotFilledIcon,
+} from "../../style/Icon";
 
 const Experience = () => {
   return (
@@ -52,7 +53,18 @@ const Experience = () => {
               </Flex>
             </Flex>
 
-            <Text color="gray">{item.description}</Text>
+            <Text as="div" color="gray" mb={"4"}>
+              {item.description}
+            </Text>
+
+            <Text as="div" size={"4"} weight={"bold"} mb={"2"}>
+              주요 성과
+            </Text>
+            {item.achievements.map((item, i) => (
+              <Text as="div" className="p-0" size={"3"} color="gray" key={i}>
+                <DotFilledIcon /> {item}
+              </Text>
+            ))}
           </Card>
         ))}
       </Box>

@@ -3,7 +3,13 @@ import { data } from "../../data/AboutMe";
 
 const AboutMe = () => {
   return (
-    <Flex className="container" direction="column" align={"center"} py={"9"}>
+    <Flex
+      className="container"
+      direction="column"
+      align={"center"}
+      py={"9"}
+      my={"9"}
+    >
       <Text as="div" size={"8"} weight={"bold"} mb={"5"} align="center">
         About Me
       </Text>
