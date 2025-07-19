@@ -1,5 +1,8 @@
-import { Flex, Text } from "@radix-ui/themes";
+import { CaretSortIcon } from "@radix-ui/react-icons";
+import { Badge, Flex, Text } from "@radix-ui/themes";
+import { data } from "../../data/Skills";
 import { WhiteCard } from "../../shared/ui/WhiteCard";
+import { SkillBgColor } from "../../utils/skills";
 
 const Skills = () => {
   return (
@@ -17,8 +20,39 @@ const Skills = () => {
       </Text>
 
       <Flex className="w-full max-w-[1000px]" gap={"4"}>
-        {[1, 2, 3].map((_, i) => (
-          <WhiteCard key={i}>dd</WhiteCard>
+        {data.map((skill, i) => (
+          <WhiteCard key={i}>
+            <Flex
+              className="bg-gradient rounded-full"
+              width={"4rem"}
+              height={"4rem"}
+              align={"center"}
+              justify={"center"}
+              m={"auto"}
+            >
+              {skill.icon}
+            </Flex>
+
+            <Text as="div" align={"center"} size={"5"} weight={"bold"}>
+              {skill.title}
+            </Text>
+            <Text as="div" align={"center"} size={"2"} color="gray" my={"2"}>
+              {skill.description}
+            </Text>
+            {skill.list.map((item) => (
+              <Badge
+                key={item}
+                mt={"3"}
+                mr={"3"}
+                variant="soft"
+                {...SkillBgColor(item)}
+                size="2"
+                radius="full"
+              >
+                {item}
+              </Badge>
+            ))}
+          </WhiteCard>
         ))}
       </Flex>
     </Flex>

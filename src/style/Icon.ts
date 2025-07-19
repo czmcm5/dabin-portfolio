@@ -4,4 +4,5 @@ export {
   BackpackIcon,
   SewingPinIcon,
   DotFilledIcon,
+  CaretSortIcon,
 } from "@radix-ui/react-icons";

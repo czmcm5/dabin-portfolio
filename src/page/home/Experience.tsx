@@ -1,12 +1,12 @@
 import { Box, Flex, Text } from "@radix-ui/themes";
+import { data } from "../../data/Experience";
+import { WhiteCard } from "../../shared/ui/WhiteCard";
 import {
   BackpackIcon,
   CalendarIcon,
   DotFilledIcon,
   SewingPinIcon,
-} from "../../assets/Icon";
-import { data } from "../../data/Experience";
-import { WhiteCard } from "../../shared/ui/WhiteCard";
+} from "../../style/Icon";
 
 const Experience = () => {
   return (

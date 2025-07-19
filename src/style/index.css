@@ -13,6 +13,8 @@
   --color-subBg: #fffdeb;
   --color-foreground: #3f3f46;
   --color-muted: #fef3c7;
+  --color-black: #1d1d1d;
+  --color-bg-gradient: ;
 }
 
 body {
@@ -27,6 +29,9 @@ body {
 }
 .container.gray {
   background-color: #fffdeb;
+}
+.bg-gradient {
+  background: linear-gradient(to bottom right, #fbbf24, #fb923c);
 }
 span.theme-text {
   background: linear-gradient(to bottom right, #fbbf24, #fb923c);

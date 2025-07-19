@@ -14,7 +14,7 @@ const Header = () => {
       <Text as="div" size="5" color="gray" align="center" weight={"medium"}>
         {data.subTitle2}
       </Text>
-      <Button className=" bg-[#1d1d1d] cursor-pointer" size="4" mt={"5"}>
+      <Button className="bg-[#1d1d1d] cursor-pointer" size="4" mt={"5"}>
         프로젝트 보기
       </Button>
     </Flex>
