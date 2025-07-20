@@ -6,7 +6,8 @@ import {
   CalendarIcon,
   DotFilledIcon,
   SewingPinIcon,
-} from "../../style/Icon";
+} from "../../assets/Icon";
+import { MAX_W_SIZE } from "../../config/home";
 
 const Experience = () => {
   return (
@@ -23,7 +24,7 @@ const Experience = () => {
         다양한 환경에서의 개발 경험을 통해 성장해왔습니다.
       </Text>
 
-      <Box className="w-full max-w-[1000px]">
+      <Box className={`w-full max-w-[${MAX_W_SIZE}]`}>
         {data.map((item, i) => (
           <WhiteCard key={i}>
             <Flex justify={"between"} mb={"4"}>
