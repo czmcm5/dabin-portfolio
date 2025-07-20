@@ -1,12 +1,13 @@
 // https://www.radix-ui.com/icons
 export {
+  CropIcon,
+  GlobeIcon,
   CalendarIcon,
   BackpackIcon,
   SewingPinIcon,
   DotFilledIcon,
   CaretSortIcon,
-  GlobeIcon,
   ChatBubbleIcon,
-  CropIcon,
   DimensionsIcon,
+  GitHubLogoIcon,
 } from "@radix-ui/react-icons";
