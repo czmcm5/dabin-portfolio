@@ -2,6 +2,7 @@
 export {
   CropIcon,
   GlobeIcon,
+  Cross1Icon,
   CalendarIcon,
   BackpackIcon,
   SewingPinIcon,
@@ -9,5 +10,7 @@ export {
   CaretSortIcon,
   ChatBubbleIcon,
   DimensionsIcon,
+  NotionLogoIcon,
   GitHubLogoIcon,
+  ExternalLinkIcon,
 } from "@radix-ui/react-icons";

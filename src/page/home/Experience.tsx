@@ -1,13 +1,9 @@
 import { Box, Flex, Text } from "@radix-ui/themes";
-import { data } from "../../data/Experience";
-import { WhiteCard } from "../../shared/ui/WhiteCard";
-import {
-  BackpackIcon,
-  CalendarIcon,
-  DotFilledIcon,
-  SewingPinIcon,
-} from "../../assets/Icon";
+import { BackpackIcon, CalendarIcon, SewingPinIcon } from "../../assets/Icon";
 import { MAX_W_SIZE } from "../../config/home";
+import { data } from "../../data/Experience";
+import { BulletText } from "../../shared/ui/common";
+import { WhiteCard } from "../../shared/ui/WhiteCard";
 
 const Experience = () => {
   return (
@@ -63,9 +59,7 @@ const Experience = () => {
               주요 성과
             </Text>
             {item.achievements.map((item, i) => (
-              <Text as="div" className="p-0" size={"3"} color="gray" key={i}>
-                <DotFilledIcon color="var(--color-primary)" /> {item}
-              </Text>
+              <BulletText key={i}>{item}</BulletText>
             ))}
           </WhiteCard>
         ))}
