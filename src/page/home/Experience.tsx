@@ -20,7 +20,7 @@ const Experience = () => {
         다양한 환경에서의 개발 경험을 통해 성장해왔습니다.
       </Text>
 
-      <Box className={`w-full max-w-[${MAX_W_SIZE}]`}>
+      <Box className={`w-full`} maxWidth={MAX_W_SIZE}>
         {data.map((item, i) => (
           <WhiteCard key={i}>
             <Flex justify={"between"} mb={"4"}>

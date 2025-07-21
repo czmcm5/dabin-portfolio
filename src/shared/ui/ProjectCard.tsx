@@ -1,6 +1,6 @@
 import { Badge, Box, Card, Dialog, Flex, Text } from "@radix-ui/themes";
 import { Cross1Icon } from "../../assets/Icon";
-import { SUB_MAX_W_SIZE } from "../../config/home";
+import { MAX_W_SIZE } from "../../config/home";
 import { goSite } from "../../utils/project";
 import { DemoBtn, GithubBtn, NotionBtn } from "./button";
 import { BulletText } from "./common";
@@ -19,10 +19,16 @@ interface ProjectDetailProps extends ProjectProps {
   techCallenge?: string[];
 }
 
-export const ProjectCard = ({ title, description, skills }: ProjectProps) => {
+export const ProjectCard = ({
+  title,
+  description,
+  skills,
+  demo,
+  github,
+}: ProjectProps) => {
   return (
     <Card
-      className="rt-Card w-full bg-[var(--color-bg)] border border-[var(--color-primary)] cursor-pointer"
+      className="rt-Card h-full bg-[var(--color-bg)] border border-[var(--color-primary)] cursor-pointer"
       style={
         {
           "--card-border-width": "0px",
@@ -30,7 +36,7 @@ export const ProjectCard = ({ title, description, skills }: ProjectProps) => {
         } as React.CSSProperties
       }
     >
-      <Box className="h-[10rem] bg-[var(--color-gray)]">sd</Box>
+      <Box className="h-[10rem] bg-[#ededed]"> </Box>
 
       <Box p={"4"}>
         <Text as="div" size={"6"} weight={"bold"}>
@@ -56,8 +62,8 @@ export const ProjectCard = ({ title, description, skills }: ProjectProps) => {
           ))}
         </Box>
 
-        <GithubBtn>GitHub</GithubBtn>
-        <DemoBtn>Demo</DemoBtn>
+        {github && <GithubBtn onClick={() => goSite(github)}>GitHub</GithubBtn>}
+        {demo && <DemoBtn onClick={() => goSite(demo)}>Demo</DemoBtn>}
       </Box>
     </Card>
   );
@@ -75,7 +81,7 @@ export const ProjectContent = ({
   techCallenge,
 }: ProjectDetailProps) => {
   return (
-    <Dialog.Content maxWidth={SUB_MAX_W_SIZE}>
+    <Dialog.Content maxWidth={MAX_W_SIZE}>
       <Flex justify={"between"}>
         <Dialog.Title className="text-xl font-bold mb-4">{title}</Dialog.Title>
         <Dialog.Close>
@@ -84,13 +90,13 @@ export const ProjectContent = ({
       </Flex>
       <Dialog.Description className="mb-4">{description}</Dialog.Description>
 
+      <Text>#팀</Text>
+
       <Box
-        className="h-[15rem] bg-[var(--color-gray)] rounded-[12px]"
+        className="h-[15rem] bg-[#ededed] rounded-[12px]"
         overflow={"hidden"}
         my={"4"}
-      >
-        sd
-      </Box>
+      ></Box>
 
       <Flex
         className="border-b border-b-[var(--slate-a4)]"
@@ -99,7 +105,7 @@ export const ProjectContent = ({
         mb={"4"}
       >
         <Box className="flex-1">
-          <Text as="div" weight={"bold"} mb={"2"}>
+          <Text as="div" size={"4"} weight={"bold"} mb={"2"}>
             주요 기능
           </Text>
           {mainFeat.map((item, i) => (
@@ -108,7 +114,7 @@ export const ProjectContent = ({
 
           {techCallenge && (
             <>
-              <Text as="div" size={"3"} weight={"bold"} mt={"4"} mb={"1"}>
+              <Text as="div" size={"4"} weight={"bold"} mt={"4"} mb={"2"}>
                 기술적 도전
               </Text>
               {techCallenge.map((item, i) => (
@@ -122,7 +128,7 @@ export const ProjectContent = ({
         <Box className="flex-1">
           {performance && (
             <>
-              <Text as="div" weight={"bold"} mb={"2"}>
+              <Text as="div" size={"4"} weight={"bold"} mb={"2"}>
                 성과 및 결과
               </Text>
               {performance.map((item, i) => (
@@ -133,7 +139,7 @@ export const ProjectContent = ({
             </>
           )}
 
-          <Text as="div" weight={"bold"} mt={"4"} mb={"1"}>
+          <Text as="div" size={"4"} weight={"bold"} mt={"4"} mb={"2"}>
             사용 기술
           </Text>
           {skills.map((item, i) => (
@@ -152,9 +158,21 @@ export const ProjectContent = ({
         </Box>
       </Flex>
 
-      {github && <GithubBtn onClick={() => goSite(github)}>GitHub</GithubBtn>}
-      {notion && <NotionBtn onClick={() => goSite(notion)}>Notion</NotionBtn>}
-      {demo && <DemoBtn onClick={() => goSite(demo)}>Demo</DemoBtn>}
+      {github && (
+        <GithubBtn size="3" onClick={() => goSite(github)}>
+          GitHub
+        </GithubBtn>
+      )}
+      {notion && (
+        <NotionBtn size="3" onClick={() => goSite(notion)}>
+          Notion
+        </NotionBtn>
+      )}
+      {demo && (
+        <DemoBtn size="3" onClick={() => goSite(demo)}>
+          Demo
+        </DemoBtn>
+      )}
     </Dialog.Content>
   );
 };

@@ -19,7 +19,7 @@ const Skills = () => {
         다양한 기술 스택과 도구를 활용하여 개발합니다.
       </Text>
 
-      <Flex className={`w-full max-w-[${MAX_W_SIZE}]`} gap={"6"}>
+      <Flex className={`w-full`} gap={"6"} maxWidth={MAX_W_SIZE}>
         {data.map((skill, i) => (
           <WhiteCard key={i}>
             <Flex
@@ -64,7 +64,8 @@ const Skills = () => {
       </Flex>
 
       <Flex
-        className={`w-full max-w-[${SUB_MAX_W_SIZE}]`}
+        className={`w-full`}
+        maxWidth={SUB_MAX_W_SIZE}
         gap={"4"}
         justify={"between"}
         my={"9"}

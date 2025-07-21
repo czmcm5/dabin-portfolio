@@ -1,4 +1,4 @@
-import { Box, Dialog, Flex, Text } from "@radix-ui/themes";
+import { Box, Dialog, Flex, Grid, Text } from "@radix-ui/themes";
 import { PROJECT_MAX_W_SIZE } from "../../config/home";
 import { data } from "../../data/Projects";
 import { ProjectCard, ProjectContent } from "../../shared/ui/ProjectCard";
@@ -19,15 +19,22 @@ const Projects = () => {
         확인할 수 있습니다.
       </Text>
 
-      <Flex className={`w-full max-w-[${PROJECT_MAX_W_SIZE}]`} gap={"6"}>
+      <Grid
+        className={`w-ful items-stretch`}
+        gap={"5"}
+        columns={"3"}
+        maxWidth={PROJECT_MAX_W_SIZE}
+      >
         {data.map((project, i) => (
           <Dialog.Root key={i}>
             <Dialog.Trigger>
-              <Box className="w-full">
+              <Box className="flex-1">
                 <ProjectCard
                   title={project.title}
                   description={project.description}
                   skills={project.skills}
+                  github={project.github}
+                  demo={project.demo}
                 />
               </Box>
             </Dialog.Trigger>
@@ -45,7 +52,7 @@ const Projects = () => {
             />
           </Dialog.Root>
         ))}
-      </Flex>
+      </Grid>
     </Flex>
   );
 };
