@@ -1,5 +1,5 @@
 import { Flex, Text } from "@radix-ui/themes";
-import { GitHubLogoIcon } from "../../assets/Icon";
+import { GitHubLogoIcon } from "../../../assets/Icon";
 
 const Footer = () => {
   return (

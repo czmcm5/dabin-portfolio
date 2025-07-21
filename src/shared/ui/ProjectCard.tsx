@@ -3,7 +3,7 @@ import { Cross1Icon } from "../../assets/Icon";
 import { MAX_W_SIZE } from "../../config/home";
 import { goSite } from "../../utils/project";
 import { DemoBtn, GithubBtn, NotionBtn } from "./button";
-import { BulletText } from "./common";
+import { BulletText } from "./text";
 
 interface ProjectProps {
   title: string;
@@ -28,7 +28,7 @@ export const ProjectCard = ({
 }: ProjectProps) => {
   return (
     <Card
-      className="rt-Card h-full bg-[var(--color-bg)] border border-[var(--color-primary)] cursor-pointer"
+      className="custon-Card h-full bg-[var(--color-bg)] border border-[var(--color-primary)] cursor-pointer"
       style={
         {
           "--card-border-width": "0px",

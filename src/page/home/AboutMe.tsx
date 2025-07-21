@@ -8,7 +8,7 @@ const AboutMe = () => {
       direction="column"
       align={"center"}
       py={"9"}
-      my={"9"}
+      mt={"9"}
     >
       <Text as="div" size={"8"} weight={"bold"} mb={"5"} align="center">
         About Me

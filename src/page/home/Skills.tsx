@@ -1,8 +1,9 @@
 import { Badge, Box, Flex, Text } from "@radix-ui/themes";
 import { data, data2 } from "../../data/Skills";
 import { WhiteCard } from "../../shared/ui/WhiteCard";
-import { SkillBgColor } from "../../utils/skills";
+import { SkillBgColor } from "../../utils/BadgeStyle";
 import { MAX_W_SIZE, SUB_MAX_W_SIZE } from "../../config/home";
+import { IconBadge } from "../../shared/ui/text";
 
 const Skills = () => {
   return (
@@ -22,13 +23,7 @@ const Skills = () => {
       <Flex className={`w-full`} gap={"6"} maxWidth={MAX_W_SIZE}>
         {data.map((skill, i) => (
           <WhiteCard key={i}>
-            <Flex
-              className="bg-gradient rounded-full w-[4rem] h-[4rem] m-auto"
-              align={"center"}
-              justify={"center"}
-            >
-              {skill.icon}
-            </Flex>
+            <IconBadge m="auto">{skill.icon}</IconBadge>
 
             <Text as="div" align={"center"} size={"5"} weight={"bold"} mt={"4"}>
               {skill.title}
