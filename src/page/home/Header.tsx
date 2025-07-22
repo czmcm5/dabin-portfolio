@@ -1,5 +1,5 @@
 import { Box, Button, Flex, Text } from "@radix-ui/themes";
-import TypingEffext from "../../compoent/Header/useTypingEffext";
+import TypingEffext from "../../compoent/Header/TypingEffext";
 import { data } from "../../data/Header";
 import { mediaText } from "../../utils/media";
 
