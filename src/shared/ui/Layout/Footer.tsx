@@ -1,5 +1,6 @@
 import { Flex, Text } from "@radix-ui/themes";
 import { GitHubLogoIcon } from "../../../assets/Icon";
+import { goSite } from "../../../utils/project";
 
 const Footer = () => {
   return (
@@ -9,7 +10,10 @@ const Footer = () => {
           © 2025 YUN DABIN. All rights reserved.
         </Text>
 
-        <GitHubLogoIcon />
+        <GitHubLogoIcon
+          cursor="pointer"
+          onClick={() => goSite("https://github.com/czmcm5")}
+        />
       </Flex>
     </div>
   );

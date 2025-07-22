@@ -53,3 +53,15 @@ export const IconBadge = ({
     </Flex>
   );
 };
+
+export const HoverText = ({ children }: { children: string }) => {
+  return (
+    <Text
+      className="cursor-pointer hover:text-black hover:scale-108 transition"
+      size={"2"}
+      weight={"medium"}
+    >
+      {children}
+    </Text>
+  );
+};

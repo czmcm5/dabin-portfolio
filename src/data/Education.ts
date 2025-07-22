@@ -6,7 +6,7 @@ export const educationData: {
   stauts: string;
 }[] = [
   {
-    name: "코딩알려주는 누나",
+    name: "코딩 알려주는 누나",
     course: "타입스크립트 스터디 1기",
     period: "2025.05 ~ 2025.06 (5주)",
     description:
