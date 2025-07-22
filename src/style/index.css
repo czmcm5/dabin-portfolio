@@ -58,3 +58,20 @@ span.theme-text {
   transform: translateY(-8px);
   box-shadow: 0 4px 12px #ffe5d8;
 }
+
+/* 커서 깜빡임 애니메이션 */
+@keyframes blink {
+  0%,
+  100% {
+    border-color: black;
+  }
+  50% {
+    border-color: transparent;
+  }
+}
+
+.corsur-ani {
+  white-space: nowrap;
+  border-right: 2px solid black;
+  animation: blink 0.7s step-end infinite;
+}

@@ -29,7 +29,7 @@ const AboutMe = () => {
             ))}
           </Flex>
         </Box>
-        <Flex className="flex-1" direction="column" align={"center"}>
+        {/* <Flex className="flex-1" direction="column" align={"center"}>
           <Box
             className="border-4 border-transparent rounded-full overflow-hidden theme-border"
             width={"16rem"}
@@ -44,7 +44,7 @@ const AboutMe = () => {
               }}
             />
           </Box>
-        </Flex>
+        </Flex> */}
       </Flex>
     </Flex>
   );
