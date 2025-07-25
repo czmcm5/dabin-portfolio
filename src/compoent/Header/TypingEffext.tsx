@@ -1,4 +1,4 @@
-import { Box, Text } from "@radix-ui/themes";
+import { Box, Text } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 
 const TypingEffext = ({
@@ -49,8 +49,8 @@ const TypingEffext = ({
   }, [index, isDeleting, text, typingSpeed, deletingSpeed, delayAfterTyping]);
 
   return (
-    <Box className="w-[28rem] max-[600px]:w-[100%]" overflow="hidden">
-      <Text as="div" weight="bold" align="center">
+    <Box w={{ base: "100%", sm: "28rem" }} overflow="hidden">
+      <Text variant="lgTitle" align="center">
         <span className="theme-text corsur-ani">{displayedText}</span>
       </Text>
     </Box>

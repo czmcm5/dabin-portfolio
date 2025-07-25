@@ -5,11 +5,15 @@ import "@radix-ui/themes/styles.css";
 import "../style/tailwind.css";
 import App from "./App.tsx";
 import { Theme } from "@radix-ui/themes";
+import { ChakraProvider } from "@chakra-ui/react";
+import theme from "../style/theme.ts";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <Theme>
-      <App />
-    </Theme>
+    <ChakraProvider theme={theme}>
+      <Theme>
+        <App />
+      </Theme>
+    </ChakraProvider>
   </StrictMode>
 );
