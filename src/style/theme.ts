@@ -58,6 +58,10 @@ const theme = extendTheme({
           fontSize: "14px",
           fontWeight: "medium",
         },
+        highlightBlack: {
+          color: "black",
+          fontWeight: "bold",
+        },
       },
     },
     Button: {
@@ -83,6 +87,7 @@ const theme = extendTheme({
       baseStyle: {
         px: 3,
         py: 0.5,
+        fontWeight: "medium",
         textTransform: "none",
         borderRadius: 50,
       },

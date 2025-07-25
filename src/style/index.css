@@ -26,6 +26,7 @@ body {
 }
 
 .container {
+  /* background-color: red; */
   padding: 0 1rem;
 }
 .container.gray {
@@ -46,6 +47,8 @@ span.theme-text {
   -webkit-text-fill-color: transparent;
 }
 .theme-border {
+  border-radius: 50%;
+  border: 4px solid transparent;
   background-image: linear-gradient(#fff, #fff),
     linear-gradient(to bottom right, #ffd877, #f17917);
   background-origin: border-box;
