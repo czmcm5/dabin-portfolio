@@ -17,6 +17,10 @@ const theme = extendTheme({
     },
     yellow: {
       200: "#fff5c9",
+      500: "#fbbf24", // primary
+    },
+    orange: {
+      500: "#fb923c", // accent
     },
   },
   components: {

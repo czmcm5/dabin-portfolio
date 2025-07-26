@@ -1,16 +1,13 @@
 export const data: {
   company: string;
-  position: string;
-  period: string;
   description: string;
+  period: string;
   achievements: string[];
 }[] = [
   {
-    company: "링크캠퍼스 (청년 스타트업)",
-    position: "프론트엔드 개발자",
+    company: "링크캠퍼스",
+    description: "청년 스타트업 (개발팀 3~4명)",
     period: "2023.06 ~ 2025.03 (1년 9개월)",
-    description:
-      "React와 TypeScript를 활용한 B2B SaaS 플랫폼 개발을 담당하고 있습니다.",
     achievements: [
       "레거시 코드 분석 및 신 기능 개발",
       "React, TypeScript 기반의 자사/외주 서비스 웹 개발",

@@ -1,24 +1,26 @@
-import { Card } from "@radix-ui/themes";
+import { Box } from "@chakra-ui/react";
 
 export const WhiteCard = ({
   children,
   mb,
+  hoverEvent = false,
 }: {
   children: React.ReactNode;
   mb?: string;
+  hoverEvent?: boolean;
 }) => {
   return (
-    <Card
-      className="custon-Card w-full bg-[var(--color-bg)] border border-[var(--color-primary)] "
-      size={"3"}
+    <Box
+      {...(hoverEvent && { className: "custom-Card" })}
+      w="full"
+      p={4}
       mb={mb || ""}
-      style={
-        {
-          "--card-border-width": "0px",
-        } as React.CSSProperties
-      }
+      bg="white"
+      border="1px solid"
+      borderColor="yellow.500"
+      borderRadius={8}
     >
       {children}
-    </Card>
+    </Box>
   );
 };
