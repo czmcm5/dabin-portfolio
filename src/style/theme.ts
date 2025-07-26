@@ -43,6 +43,9 @@ const theme = extendTheme({
           fontSize: "18px",
           fontWeight: "bold",
         },
+        xxsTitle: {
+          fontWeight: "bold",
+        },
         lgDescription: {
           color: "gray",
           fontSize: { base: "16px", lg: "20px" },
@@ -57,6 +60,14 @@ const theme = extendTheme({
           color: "gray",
           fontSize: "14px",
           fontWeight: "medium",
+        },
+        xsDescription: {
+          color: "gray",
+          fontSize: "12px",
+        },
+        highlightBlack: {
+          color: "black",
+          fontWeight: "bold",
         },
       },
     },
@@ -83,6 +94,7 @@ const theme = extendTheme({
       baseStyle: {
         px: 3,
         py: 0.5,
+        fontWeight: "medium",
         textTransform: "none",
         borderRadius: 50,
       },
@@ -94,6 +106,10 @@ const theme = extendTheme({
         bgRed: {
           bg: "red.500",
           color: "white",
+        },
+        bgBlue: {
+          bg: "#E6F4FE",
+          color: "#2582D3",
         },
         outlineBlack: {
           bg: "transparent",
