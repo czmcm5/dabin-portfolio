@@ -1,51 +1,40 @@
-import { Box, Flex, Text } from "@radix-ui/themes";
-import { CalendarIcon } from "../../assets/Icon";
+import { Box, Flex, Text } from "@chakra-ui/react";
 import { MAX_W_SIZE } from "../../config/home";
 import { data } from "../../data/Experience";
 
+import { PiDotOutlineFill } from "react-icons/pi";
 import { WhiteCard } from "../../shared/ui/WhiteCard";
-import {
-  BulletText,
-  CategoryDescription,
-  CategoryText,
-} from "../../shared/ui/text";
 
 const Experience = () => {
   return (
-    <Flex className="container gray" direction="column" align={"center"}>
-      <CategoryText>Experience</CategoryText>
-      <CategoryDescription>
-        다양한 환경에서의 개발 경험을 통해 성장해왔습니다.
-      </CategoryDescription>
+    <Flex className="container gray" direction="column" align="center" py={20}>
+      <Text variant="title" mb={6}>
+        Experience
+      </Text>
+      <Text variant="description" mb={4}>
+        경력
+      </Text>
 
-      <Box className={`w-full`} maxWidth={MAX_W_SIZE}>
+      <Box w={"full"} maxWidth={MAX_W_SIZE}>
         {data.map((item, i) => (
           <WhiteCard key={i}>
-            <Flex justify={"between"}>
-              <Text size={"5"} weight={"bold"}>
-                {item.company}
-              </Text>
-              <Flex align={"center"} gap={"2"}>
-                <CalendarIcon color="gray" />
-                <Text color="gray" size={"2"}>
-                  {item.period}
-                </Text>
-              </Flex>
+            <Flex
+              flexDir={{ base: "column", lg: "row" }}
+              justify="space-between"
+            >
+              <Text variant="xsTitle">{item.company}</Text>
+              <Text variant="smDescription">{item.period}</Text>
             </Flex>
-
-            <Text color="gray" size={"2"}>
-              {item.position}
-            </Text>
-
-            <Text as="div" color="gray" my={"4"}>
+            <Text variant="smDescription" mb={4}>
               {item.description}
             </Text>
 
-            <Text as="div" size={"4"} weight={"bold"} mb={"2"}>
-              주요 성과
-            </Text>
             {item.achievements.map((item, i) => (
-              <BulletText key={i}>{item}</BulletText>
+              <Text key={i} fontSize={14} color="gray" mb={"1"}>
+                <Flex align={"center"}>
+                  <PiDotOutlineFill style={{ color: "#fbbf24" }} /> {item}
+                </Flex>
+              </Text>
             ))}
           </WhiteCard>
         ))}
