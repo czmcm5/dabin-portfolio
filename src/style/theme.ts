@@ -94,6 +94,7 @@ const theme = extendTheme({
       baseStyle: {
         px: 3,
         py: 0.5,
+        fontWeight: "medium",
         textTransform: "none",
         borderRadius: 50,
       },
