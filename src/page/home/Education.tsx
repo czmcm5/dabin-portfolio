@@ -1,39 +1,38 @@
-import { Badge, Box, Card, Flex, Text } from "@radix-ui/themes";
-
+import { Badge, Box, Flex, HStack, Text } from "@chakra-ui/react";
 import { educationData } from "../../data/Education";
-import { CategoryDescription, CategoryText } from "../../shared/ui/text";
 
 const Education = () => {
   return (
-    <Flex className="container" direction="column" align={"center"} pb={"9"}>
-      <CategoryText>Education</CategoryText>
-      <CategoryDescription>학력/교육</CategoryDescription>
+    <Flex className="container" direction="column" align={"center"} py={"20"}>
+      <Text variant="title">Education</Text>
+      <Text variant="description">학력/교육</Text>
 
-      <Box className={`w-full`} maxWidth={"600px"}>
+      <Box w={"full"} maxWidth={"600px"} mt={4}>
         {educationData.map((item, i) => (
-          <Card key={i} mb="4">
-            <Flex justify={"between"}>
-              <Text weight={"bold"}>{item.name}</Text>
-              <Text color="gray" size={"1"}>
-                {item.period}
-              </Text>
-            </Flex>
+          <Box
+            key={i}
+            p={4}
+            mb={4}
+            border={"1px solid"}
+            borderColor={"lightGray.400"}
+            borderRadius={8}
+          >
+            <HStack justify="space-between">
+              <Text variant="xxsTitle">{item.name}</Text>
+              <Text variant="xsDescription">{item.period}</Text>
+            </HStack>
 
-            <Flex justify={"between"}>
-              <Text as="div" color="gray" size={"2"}>
-                {item.course}
-              </Text>
-              <Badge variant="soft" color="blue" size="1" radius="full">
-                {item.stauts}
-              </Badge>
-            </Flex>
+            <HStack justify="space-between">
+              <Text variant="xsDescription">{item.course}</Text>
+              <Badge variant="bgBlue">{item.stauts}</Badge>
+            </HStack>
 
             {item.description && (
-              <Text as="div" color="gray" size={"2"} mt={"2"}>
+              <Text variant="smDescription" mt={"2"}>
                 {item.description}
               </Text>
             )}
-          </Card>
+          </Box>
         ))}
       </Box>
     </Flex>
