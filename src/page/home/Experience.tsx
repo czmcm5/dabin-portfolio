@@ -30,11 +30,12 @@ const Experience = () => {
             </Text>
 
             {item.achievements.map((item, i) => (
-              <Text key={i} fontSize={14} color="gray" mb={"1"}>
-                <Flex align={"center"}>
-                  <PiDotOutlineFill style={{ color: "#fbbf24" }} /> {item}
-                </Flex>
-              </Text>
+              <Flex align={"center"} key={i}>
+                <PiDotOutlineFill style={{ color: "#fbbf24" }} />
+                <Text fontSize={14} color="gray" mb={"1"}>
+                  {item}
+                </Text>
+              </Flex>
             ))}
           </WhiteCard>
         ))}
