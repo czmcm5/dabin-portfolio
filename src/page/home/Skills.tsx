@@ -54,7 +54,7 @@ const Skills = () => {
 
       <HStack justify="space-between" w="full" maxWidth={SUB_MAX_W_SIZE} my={9}>
         {data2.map((item) => (
-          <Box>
+          <Box key={item.title}>
             <Flex align="center" justify="center">
               {item.icon}
             </Flex>
