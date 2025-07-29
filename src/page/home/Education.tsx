@@ -24,7 +24,7 @@ const Education = () => {
 
             <HStack justify="space-between">
               <Text variant="xsDescription">{item.course}</Text>
-              <Badge variant="bgBlue">{item.stauts}</Badge>
+              <Badge variant="blue">{item.stauts}</Badge>
             </HStack>
 
             {item.description && (
