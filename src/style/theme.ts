@@ -103,17 +103,36 @@ const theme = extendTheme({
         borderRadius: 50,
       },
       variants: {
-        bgBlack: {
+        gray: {
+          bg: "#F3F4F6",
+        },
+        black: {
           bg: "black.500",
           color: "white",
         },
-        bgRed: {
+        red: {
           bg: "red.500",
           color: "white",
         },
-        bgBlue: {
+        peach: {
+          bg: "#FEE2E2",
+          color: "#991B1B",
+        },
+        blue: {
           bg: "#E6F4FE",
           color: "#2582D3",
+        },
+        yellow: {
+          bg: "#FEF9C3",
+          color: "#854D0E",
+        },
+        green: {
+          bg: "#DCFCE7",
+          color: "#206D3D",
+        },
+        purple: {
+          bg: "#F3E8FF",
+          color: "#6B21A8",
         },
         outlineBlack: {
           bg: "transparent",

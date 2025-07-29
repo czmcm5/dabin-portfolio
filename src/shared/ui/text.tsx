@@ -1,6 +1,6 @@
 import { Flex, Text } from "@radix-ui/themes";
+import type { JSX } from "react";
 import { DotFilledIcon } from "../../assets/Icon";
-import type { JSX, ReactNode } from "react";
 
 export const CategoryText = ({ children }: { children: string }) => {
   return (
@@ -31,26 +31,6 @@ export const BulletText = ({
         <DotFilledIcon className="w-[18px] h-[18px]" color={color} /> {children}
       </Flex>
     </Text>
-  );
-};
-
-export const IconBadge = ({
-  children,
-  size = "4rem",
-  m = "",
-}: {
-  children: ReactNode;
-  size?: string;
-  m?: "auto" | "";
-}): JSX.Element => {
-  return (
-    <Flex
-      className={`bg-gradient rounded-full w-[${size}] h-[${size}] m-${m}`}
-      align={"center"}
-      justify={"center"}
-    >
-      {children}
-    </Flex>
   );
 };
 
