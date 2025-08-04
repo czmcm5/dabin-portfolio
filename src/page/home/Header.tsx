@@ -1,6 +1,7 @@
 import { Flex, Text, Box, Button } from "@chakra-ui/react";
 import TypingEffext from "../../compoent/Header/TypingEffext";
 import { data } from "../../data/Header";
+import { scrollToId } from "../../utils/page";
 
 const Header = () => {
   return (
@@ -33,7 +34,7 @@ const Header = () => {
       <Text variant="lgDescription">{data.subTitle1}</Text>
       <Text variant="lgDescription">{data.subTitle2}</Text>
 
-      <Button variant="black" mt={5}>
+      <Button variant="black" mt={5} onClick={() => scrollToId("Projects")}>
         프로젝트 보기
       </Button>
     </Flex>

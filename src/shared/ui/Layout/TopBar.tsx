@@ -1,13 +1,7 @@
 import { HoverText } from "../text";
 import { MAX_W_SIZE } from "../../../config/home";
 import { Box, Flex } from "@chakra-ui/react";
-
-const scrollToId = (id: string) => {
-  const el = document.getElementById(id);
-  if (el) {
-    el.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-};
+import { scrollToId } from "../../../utils/page";
 
 const TopBar = () => {
   return (
