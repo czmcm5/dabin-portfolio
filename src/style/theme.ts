@@ -40,7 +40,7 @@ const theme = extendTheme({
           fontWeight: "bold",
         },
         smTitle: {
-          fontSize: { base: "24px", lg: "30px" },
+          fontSize: "24px",
           fontWeight: "bold",
         },
         xsTitle: {
@@ -137,7 +137,7 @@ const theme = extendTheme({
         outlineBlack: {
           bg: "transparent",
           border: "1px solid",
-          borderColor: "black.500",
+          borderColor: "lightGray.500",
         },
       },
     },

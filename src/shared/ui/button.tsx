@@ -1,4 +1,4 @@
-import { Button } from "@radix-ui/themes";
+import { Button } from "@chakra-ui/react";
 import {
   ExternalLinkIcon,
   GitHubLogoIcon,
@@ -11,14 +11,14 @@ interface ButtonProps {
   size?: "3" | "1" | "2" | "4";
 }
 
-export const DemoBtn = ({ children, onClick, size = "2" }: ButtonProps) => {
+export const DemoBtn = ({ children, onClick }: ButtonProps) => {
   return (
     <Button
       onClick={onClick}
-      className="cursor-pointer"
-      variant="outline"
-      color="gray"
-      size={size}
+      variant={"outlineGray"}
+      color={"gray"}
+      fontSize={14}
+      gap={2}
     >
       <ExternalLinkIcon />
       {children}
@@ -26,29 +26,23 @@ export const DemoBtn = ({ children, onClick, size = "2" }: ButtonProps) => {
   );
 };
 
-export const GithubBtn = ({ children, onClick, size = "2" }: ButtonProps) => {
+export const GithubBtn = ({ children, onClick }: ButtonProps) => {
   return (
-    <Button
-      onClick={onClick}
-      className="bg-[var(--color-black)] text-[var(--color-bg)] cursor-pointer"
-      mr={"2"}
-      size={size}
-    >
+    <Button variant="black" onClick={onClick} mr={"2"} fontSize={14} gap={2}>
       <GitHubLogoIcon color="white" />
       {children}
     </Button>
   );
 };
 
-export const NotionBtn = ({ children, onClick, size = "2" }: ButtonProps) => {
+export const NotionBtn = ({ children, onClick }: ButtonProps) => {
   return (
     <Button
       onClick={onClick}
-      className="text-[var(--slate-a12)] cursor-pointer"
-      variant="outline"
-      color="gray"
+      variant="outlineGray"
+      fontSize={14}
+      gap={2}
       mr={"2"}
-      size={size}
     >
       <NotionLogoIcon />
       {children}

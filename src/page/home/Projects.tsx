@@ -1,56 +1,70 @@
-import { Box, Dialog, Flex, Grid, Text } from "@radix-ui/themes";
+import { Box, Flex, Grid, Modal, ModalOverlay, Text } from "@chakra-ui/react";
+import { useState } from "react";
 import { PROJECT_MAX_W_SIZE } from "../../config/home";
 import { data } from "../../data/Projects";
 import { ProjectCard, ProjectContent } from "../../shared/ui/ProjectCard";
 
 const Projects = () => {
+  const [selectedProjectIdx, setSelectedProjectIdx] = useState<number | null>(
+    null
+  );
+  const onOpen = (i: number | null): void => setSelectedProjectIdx(i);
+
   return (
-    <Flex
-      className="container gray"
-      direction="column"
-      align={"center"}
-      py={"9"}
-    >
-      <Text as="div" size={"8"} weight={"bold"} mb={"5"} align="center">
+    <Flex className="container gray" direction="column" align="center" py="9">
+      <Text variant="title" mb={6}>
         Projects
       </Text>
-      <Text as="div" size="3" color="gray" weight={"medium"} mb={"4"}>
+      <Text variant="description" mb={4}>
         제가 진행한 주요 프로젝트들입니다. 각 프로젝트를 클릭하면 상세 내용을
         확인할 수 있습니다.
       </Text>
 
       <Grid
-        className={`w-ful items-stretch`}
+        templateColumns={{
+          base: "repeat(1, 1fr)",
+          md: "repeat(2, 1fr)",
+          lg: "repeat(3, 1fr)",
+        }}
         gap={"5"}
-        columns={"3"}
         maxWidth={PROJECT_MAX_W_SIZE}
       >
         {data.map((project, i) => (
-          <Dialog.Root key={i}>
-            <Dialog.Trigger>
-              <Box className="flex-1">
-                <ProjectCard
-                  title={project.title}
-                  description={project.description}
-                  skills={project.skills}
-                  github={project.github}
-                  demo={project.demo}
-                />
-              </Box>
-            </Dialog.Trigger>
-
-            <ProjectContent
+          <Box className="flex-1" key={i}>
+            <ProjectCard
               title={project.title}
               description={project.description}
+              image={project.image}
               skills={project.skills}
-              notion={project.notion}
               github={project.github}
               demo={project.demo}
-              mainFeat={project.mainFeat}
-              performance={project.performance}
-              techCallenge={project.techCallenge}
+              role={project.role}
+              projectType={project.projectType}
+              onOpen={() => onOpen(i)}
             />
-          </Dialog.Root>
+            <Modal
+              isOpen={selectedProjectIdx === i}
+              onClose={() => onOpen(null)}
+              isCentered
+            >
+              <ModalOverlay />
+              <ProjectContent
+                title={project.title}
+                description={project.description}
+                image={project.image}
+                skills={project.skills}
+                role={project.role}
+                projectType={project.projectType}
+                notion={project.notion}
+                github={project.github}
+                demo={project.demo}
+                mainFeat={project.mainFeat}
+                performance={project.performance}
+                techCallenge={project.techCallenge}
+                troubleshooting={project.troubleshooting}
+              />
+            </Modal>
+          </Box>
         ))}
       </Grid>
     </Flex>
