@@ -11,7 +11,14 @@ const Projects = () => {
   const onOpen = (i: number | null): void => setSelectedProjectIdx(i);
 
   return (
-    <Flex className="container gray" direction="column" align="center" py="9">
+    <Flex
+      as="section"
+      id="Projects"
+      className="container gray"
+      direction="column"
+      align="center"
+      py="9"
+    >
       <Text variant="title" mb={6}>
         Projects
       </Text>

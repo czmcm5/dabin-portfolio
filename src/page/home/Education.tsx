@@ -3,7 +3,14 @@ import { educationData } from "../../data/Education";
 
 const Education = () => {
   return (
-    <Flex className="container" direction="column" align={"center"} py={"20"}>
+    <Flex
+      as="section"
+      id="Education"
+      className="container"
+      direction="column"
+      align={"center"}
+      py={"20"}
+    >
       <Text variant="title">Education</Text>
       <Text variant="description">학력/교육</Text>
 

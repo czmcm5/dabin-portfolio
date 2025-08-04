@@ -37,12 +37,23 @@ export const BulletText = ({
   );
 };
 
-export const HoverText = ({ children }: { children: string }) => {
+export const HoverText = ({
+  children,
+  onClick,
+}: {
+  children: string;
+  onClick: () => void;
+}) => {
   return (
     <Text
-      className="cursor-pointer hover:text-black hover:scale-108 transition"
-      size={"2"}
-      fontWeight={"medium"}
+      fontWeight="medium"
+      cursor="pointer"
+      color="gray"
+      _hover={{
+        color: "black",
+        transform: "scale(1.08)",
+      }}
+      onClick={onClick}
     >
       {children}
     </Text>

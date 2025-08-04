@@ -2,7 +2,14 @@ import { Badge, Box, Flex, Img, Text } from "@chakra-ui/react";
 
 const AboutMe = () => {
   return (
-    <Flex className="container" direction="column" align={"center"} py={"20"}>
+    <Flex
+      as="section"
+      id="About"
+      className="container"
+      direction="column"
+      align={"center"}
+      py={"20"}
+    >
       <Text variant={"title"} mb={"5"}>
         About Me
       </Text>

@@ -6,16 +6,6 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  --color-primary: #fbbf24;
-  --color-accent: #fb923c;
-  --color-bg: #ffff;
-  --color-subBg: #fffdeb;
-  --color-foreground: #3f3f46;
-  --color-muted: #fef3c7;
-  --color-black: #1d1d1d;
-  --color-gray: #dedede;
-  --color-green: #62b759;
 }
 
 body {
@@ -26,7 +16,6 @@ body {
 }
 
 .container {
-  /* background-color: red; */
   padding: 0 1rem;
 }
 .container.gray {

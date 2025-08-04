@@ -7,7 +7,14 @@ import { WhiteCard } from "../../shared/ui/WhiteCard";
 
 const Experience = () => {
   return (
-    <Flex className="container gray" direction="column" align="center" py={20}>
+    <Flex
+      as="section"
+      id="Experience"
+      className="container gray"
+      direction="column"
+      align="center"
+      py={20}
+    >
       <Text variant="title" mb={6}>
         Experience
       </Text>

@@ -5,7 +5,14 @@ import { WhiteCard } from "../../shared/ui/WhiteCard";
 
 const Skills = () => {
   return (
-    <Flex className="container gray" direction="column" align="center" py={20}>
+    <Flex
+      as="section"
+      id="Skills"
+      className="container gray"
+      direction="column"
+      align="center"
+      py={20}
+    >
       <Text variant="title" mb={6}>
         Skills
       </Text>
