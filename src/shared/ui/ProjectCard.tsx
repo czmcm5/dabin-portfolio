@@ -141,7 +141,7 @@ export const ProjectContent = ({
         </Box>
 
         <Flex flexDir={{ base: "column", lg: "row" }} justify={"between"}>
-          <Box className="flex-1">
+          <Box flex={1}>
             <Text fontWeight="bold" my={"2"}>
               주요 기여
             </Text>
@@ -162,14 +162,14 @@ export const ProjectContent = ({
               </>
             )}
           </Box>
-          <Box className="flex-1">
+          <Box flex={1}>
             {performance && (
               <>
                 <Text fontWeight="bold" my={"2"}>
                   성과 및 결과
                 </Text>
                 {performance.map((item, i) => (
-                  <BulletText color="var(--color-green)" key={i}>
+                  <BulletText color="#21584a" key={i}>
                     {item}
                   </BulletText>
                 ))}
