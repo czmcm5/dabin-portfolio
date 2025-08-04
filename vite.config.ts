@@ -4,6 +4,7 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 
 export default defineConfig({
+  base: "/dabin-portfolio/",
   plugins: [react()],
   resolve: {
     alias: {
